@@ -26,7 +26,7 @@ class Note
     }
 
 
-    //SETTEUR
+    //SETTERS
     public function setTitre($newTitre){
         if(is_string($newTitre)){
             $this->_titre = $newTitre;
@@ -45,7 +45,7 @@ class Note
         $this->_date = $_newDate;
     }
 
-    //GETTEUR
+    //GETTERS
     public function getTitre(){
         return $this->_titre;
     }
