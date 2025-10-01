@@ -16,12 +16,12 @@ class Note
     //hydratation
     public function hydrate(array $data)
     {
-        foreach($data as key => $value)
+        foreach($data as $key => $value)
         {
             $method = 'set'.ucfirst($key);
 
-            if (methode_exist($this, $methode))
-                $this->$methode($value);
+            if (method_exists($this, $method))
+                $this->$method($value);
         }
     }
 
@@ -34,14 +34,14 @@ class Note
         
     }
 
-    public function setContenue($newContenue){
-        if(is_string($newContenue)){
+    public function setContenue($_newContenue){
+        if(is_string($_newContenue)){
             $this->_contenue = $_newContenue;
         }
         
     } 
 
-    public function setDate($newDate){
+    public function setDate($_newDate){
         $this->_date = $_newDate;
     }
 
