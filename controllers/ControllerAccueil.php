@@ -12,6 +12,7 @@ class ControllerAccueil
         }
         else
         {
+            echo"et la ";
             $this->notes();
         }
     }
